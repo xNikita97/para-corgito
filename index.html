@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Corgito ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #FFC0CB;
+      color: #fff;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .bg iframe {
+      position: absolute;
+      border-radius: 20px;
+      opacity: 0.35;
+      animation: float 14s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-30px); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      padding: 80px 20px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      border-radius: 40px;
+      padding: 60px 50px;
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 2.2rem;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      white-space: pre-line;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    button {
+      background: #fff;
+      color: #ff5f6d;
+      border: none;
+      border-radius: 50px;
+      padding: 22px 42px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #ffe3e6;
+    }
+
+    .heart {
+      font-size: 4.5rem;
+      margin: 35px 0;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .final {
+      margin-top: 40px;
+      font-size: 2.6rem;
+      font-weight: 600;
+      display: none;
+    }
+
+    .music {
+      margin-top: 50px;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    iframe.music-frame {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .signature {
+      margin-top: 45px;
+      font-size: 1.5rem;
+      font-style: italic;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo flotante -->
+  <div class="bg">
+    <iframe src="https://assets.pinterest.com/ext/embed.html?id=123567583522627964" width="320" height="260" style="top:5%; left:4%;"></iframe>
+    <iframe src="https://assets.pinterest.com/ext/embed.html?id=140737557100683094" width="320" height="280" style="top:65%; left:6%;"></iframe>
+    <iframe src="https://assets.pinterest.com/ext/embed.html?id=123567583522627964" width="320" height="260" style="top:10%; right:6%;"></iframe>
+    <iframe src="https://assets.pinterest.com/ext/embed.html?id=123567583522627964" width="320" height="260" style="bottom:12%; right:10%;"></iframe>
+    <iframe src="https://assets.pinterest.com/ext/embed.html?id=22518066881811211" width="320" height="400" style="top:40%; right:40%;"></iframe>
+    <iframe src="https://assets.pinterest.com/ext/embed.html?id=2603712281734309" width="320" height="400" style="bottom:15%; left:35%;"></iframe>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h1>Mi Corgito ❤️</h1>
+      <h2>¿le gustaría ser mi San Valentín?</h2>
+
+
+
+
+      <div class="buttons">
+        <button onclick="aceptar()">Sí 💘</button>
+        <button onclick="aceptar()">Obvio que sí 😘</button>
+        <button onclick="aceptar()">Lo contrario a No 🥰</button>
+        <button onclick="aceptar()">Todas las anteriores ❤️‍🔥</button>
+      </div>
+
+      <div class="heart">💖</div>
+
+      <p id="final" class="final">
+        Cita sábado 14/02 a la hora del pico 💋<br>
+        Te amo ❤️
+      </p>
+
+      <!-- Música -->
+      <div class="music">
+        <iframe
+          class="music-frame"
+          src="https://www.youtube.com/embed/4nySUKoHsvc"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="signature">— Con todo mi amor, Corgita 💕</div>
+    </div>
+  </div>
+
+  <script>
+    function aceptar() {
+      document.getElementById("final").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
